@@ -1,304 +1,418 @@
-/* =====================================
-   PORTFOLIO SCRIPT
-===================================== */
+/* =========================================
+   KRISH PORTFOLIO
+========================================= */
 
-// -------------------------------
-// Mobile Menu
-// -------------------------------
+
+/* =========================================
+   MOBILE MENU
+========================================= */
 
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+if (menuBtn && navLinks) {
 
-    menuBtn.innerHTML = navLinks.classList.contains("active")
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-});
+    menuBtn.addEventListener("click", () => {
 
-// Close menu after clicking a link
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        navLinks.classList.toggle("active");
+
+        const isOpen =
+            navLinks.classList.contains("active");
+
+        menuBtn.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+
     });
-});
 
-// -------------------------------
-// Dark Mode
-// -------------------------------
 
-const themeBtn = document.getElementById("theme-btn");
+    document.querySelectorAll(".nav-link")
+        .forEach(link => {
 
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+                menuBtn.innerHTML =
+                    '<i class="fa-solid fa-bars"></i>';
+
+            });
+
+        });
+
 }
 
-themeBtn.addEventListener("click", () => {
 
-    document.body.classList.toggle("dark");
+/* =========================================
+   THEME TOGGLE
+========================================= */
 
-    if (document.body.classList.contains("dark")) {
+const themeBtn =
+    document.getElementById("theme-btn");
 
-        localStorage.setItem("theme", "dark");
+const savedTheme =
+    localStorage.getItem("portfolio-theme");
 
-        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
 
-    } else {
+if (savedTheme === "light") {
 
-        localStorage.setItem("theme", "light");
+    document.body.classList.add("light");
 
-        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    if (themeBtn) {
+
+        themeBtn.innerHTML =
+            '<i class="fa-solid fa-moon"></i>';
 
     }
 
-});
+}
 
-// -------------------------------
-// Scroll Progress Bar
-// -------------------------------
 
-const progressBar = document.getElementById("progressBar");
+if (themeBtn) {
 
-window.addEventListener("scroll", () => {
+    themeBtn.addEventListener("click", () => {
 
-    const scrollTop = document.documentElement.scrollTop;
+        document.body.classList.toggle("light");
 
-    const scrollHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
+        const isLight =
+            document.body.classList.contains("light");
 
-    const progress = (scrollTop / scrollHeight) * 100;
+        localStorage.setItem(
+            "portfolio-theme",
+            isLight ? "light" : "dark"
+        );
 
-    progressBar.style.width = progress + "%";
+        themeBtn.innerHTML = isLight
+            ? '<i class="fa-solid fa-moon"></i>'
+            : '<i class="fa-solid fa-sun"></i>';
 
-});
+    });
 
-// -------------------------------
-// Typing Effect
-// -------------------------------
+}
 
-const typingElement = document.getElementById("typing");
+
+/* =========================================
+   TYPING EFFECT
+========================================= */
+
+const typingElement =
+    document.getElementById("typing");
 
 const words = [
-
     "Full Stack Developer",
-
-    "Frontend Developer",
-
-    "Backend Developer",
-
-    "MERN Stack Developer"
-
+    "MERN Stack Developer",
+    "AI Developer",
+    "Web Developer"
 ];
 
 let wordIndex = 0;
-
 let charIndex = 0;
-
 let deleting = false;
+
 
 function typeEffect() {
 
-    const currentWord = words[wordIndex];
+    if (!typingElement) return;
+
+    const currentWord =
+        words[wordIndex];
+
 
     if (!deleting) {
 
         typingElement.textContent =
-            currentWord.substring(0, charIndex++);
+            currentWord.substring(
+                0,
+                charIndex
+            );
 
-        if (charIndex > currentWord.length) {
+        charIndex++;
+
+
+        if (charIndex >
+            currentWord.length) {
 
             deleting = true;
 
-            setTimeout(typeEffect, 1200);
+            setTimeout(
+                typeEffect,
+                1300
+            );
 
             return;
-
         }
 
     } else {
 
         typingElement.textContent =
-            currentWord.substring(0, charIndex--);
+            currentWord.substring(
+                0,
+                charIndex
+            );
+
+        charIndex--;
+
 
         if (charIndex < 0) {
 
             deleting = false;
 
-            wordIndex++;
+            wordIndex =
+                (wordIndex + 1) %
+                words.length;
 
-            if (wordIndex >= words.length) {
+            charIndex = 0;
 
-                wordIndex = 0;
+        }
+
+    }
+
+
+    setTimeout(
+        typeEffect,
+        deleting ? 55 : 100
+    );
+
+}
+
+typeEffect();
+
+
+/* =========================================
+   SCROLL PROGRESS
+========================================= */
+
+const progressBar =
+    document.getElementById("progressBar");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        const scrollTop =
+            window.scrollY;
+
+        const documentHeight =
+            document.documentElement
+                .scrollHeight;
+
+        const windowHeight =
+            window.innerHeight;
+
+        const scrollable =
+            documentHeight -
+            windowHeight;
+
+        const progress =
+            scrollable > 0
+                ? (scrollTop / scrollable) * 100
+                : 0;
+
+        if (progressBar) {
+
+            progressBar.style.width =
+                `${progress}%`;
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+const backToTop =
+    document.getElementById("backToTop");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (!backToTop) return;
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add("show");
+
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
+    }
+);
+
+
+if (backToTop) {
+
+    backToTop.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".section, .project-card, .skill-card, .contact-card, .stat"
+    );
+
+
+revealElements.forEach(element => {
+
+    element.classList.add("reveal");
+
+});
+
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+const navItems =
+    document.querySelectorAll(".nav-link");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        let currentSection = "";
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 160;
+
+            if (
+                window.scrollY >=
+                sectionTop
+            ) {
+
+                currentSection =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navItems.forEach(link => {
+
+            link.classList.remove("active");
+
+            const href =
+                link.getAttribute("href");
+
+            if (
+                href ===
+                `#${currentSection}`
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    }
+);
+
+
+/* =========================================
+   ESCAPE KEY
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape" &&
+            navLinks
+        ) {
+
+            navLinks.classList.remove(
+                "active"
+            );
+
+            if (menuBtn) {
+
+                menuBtn.innerHTML =
+                    '<i class="fa-solid fa-bars"></i>';
 
             }
 
         }
 
     }
-
-    setTimeout(typeEffect, deleting ? 60 : 120);
-
-}
-
-typeEffect();
-
-// -------------------------------
-// Back To Top Button
-// -------------------------------
-
-const backBtn = document.createElement("button");
-
-backBtn.id = "backToTop";
-
-backBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
-
-document.body.appendChild(backBtn);
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 500) {
-
-        backBtn.classList.add("show");
-
-    } else {
-
-        backBtn.classList.remove("show");
-
-    }
-
-});
-
-backBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
-});
-
-// -------------------------------
-// Reveal Animation
-// -------------------------------
-
-const revealElements = document.querySelectorAll(
-
-    "section,.project-card,.skill-card"
-
 );
 
-const reveal = () => {
 
-    revealElements.forEach(el => {
+/* =========================================
+   CONSOLE
+========================================= */
 
-        const top = el.getBoundingClientRect().top;
+console.log(
+    "%cKrish Kumar Portfolio 🚀",
+    "font-size:18px;font-weight:bold;"
+);
 
-        const windowHeight = window.innerHeight;
-
-        if (top < windowHeight - 100) {
-
-            el.classList.add("show");
-
-            el.classList.add("fade-up");
-
-        }
-
-    });
-
-};
-
-window.addEventListener("scroll", reveal);
-
-reveal();
-
-// -------------------------------
-// Active Navigation
-// -------------------------------
-
-const sections = document.querySelectorAll("section");
-
-const navItems = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 120;
-
-        if (pageYOffset >= sectionTop) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navItems.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-// -------------------------------
-// Contact Form Validation
-// -------------------------------
-
-const form = document.querySelector("form");
-
-if (form) {
-
-    form.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const name = form.querySelector("input[type='text']").value.trim();
-
-        const email = form.querySelector("input[type='email']").value.trim();
-
-        const message = form.querySelector("textarea").value.trim();
-
-        if (!name || !email || !message) {
-
-            alert("Please fill all fields.");
-
-            return;
-
-        }
-
-        const emailRegex =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailRegex.test(email)) {
-
-            alert("Please enter a valid email.");
-
-            return;
-
-        }
-
-        alert("Message sent successfully!");
-
-        form.reset();
-
-    });
-
-}
-
-console.log("🚀 Portfolio Loaded Successfully");
+console.log(
+    "Built with HTML, CSS & JavaScript."
+);

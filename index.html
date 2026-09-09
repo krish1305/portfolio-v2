@@ -1,304 +1,1561 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Krish Kumar | Full Stack Developer</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description" content="Professional Portfolio of  Krish Kumar - Full Stack Developer">
+    <meta
+        name="description"
+        content="Krish Kumar - Full Stack Developer and AI Developer building modern web applications and AI-powered solutions."
+    >
+
+    <title>Krish Kumar | Full Stack & AI Developer</title>
+
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================
+         FONT AWESOME
+    ========================== -->
 
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    >
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/responsive.css">
-
 </head>
+
 
 <body>
 
-<div id="progressBar"></div>
 
-<header>
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
 
-<nav class="navbar">
+    <div class="background-grid"></div>
 
-<div class="logo">
+    <div class="glow glow-one"></div>
 
-krish.
+    <div class="glow glow-two"></div>
 
-</div>
 
-<ul class="nav-links">
+    <!-- =========================
+         SCROLL PROGRESS
+    ========================== -->
 
-<li><a href="#home">Home</a></li>
+    <div id="progressBar"></div>
 
-<li><a href="#about">About</a></li>
 
-<li><a href="#skills">Skills</a></li>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
-<li><a href="#projects">Projects</a></li>
+    <header class="header">
 
-<li><a href="#contact">Contact</a></li>
+        <nav class="navbar">
 
-</ul>
 
-<div class="right-nav">
+            <!-- LOGO -->
 
-<button id="theme-btn">
+            <a
+                href="#home"
+                class="logo"
+            >
+                krish<span>.</span>
+            </a>
 
-<i class="fa-solid fa-moon"></i>
 
-</button>
+            <!-- NAV LINKS -->
 
-<div id="menu-btn">
+            <div class="nav-links">
 
-<i class="fa-solid fa-bars"></i>
+                <a
+                    href="#home"
+                    class="nav-link active"
+                >
+                    Home
+                </a>
 
-</div>
+                <a
+                    href="#about"
+                    class="nav-link"
+                >
+                    About
+                </a>
 
-</div>
+                <a
+                    href="#skills"
+                    class="nav-link"
+                >
+                    Skills
+                </a>
 
-</nav>
+                <a
+                    href="#projects"
+                    class="nav-link"
+                >
+                    Projects
+                </a>
 
-</header>
+                <a
+                    href="#contact"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
 
-<section class="hero" id="home">
+            </div>
 
-<div class="hero-left">
 
-<p class="small-title">
+            <!-- NAV ACTIONS -->
 
-HELLO, I'M
+            <div class="nav-actions">
 
-</p>
+                <button
+                    id="theme-btn"
+                    class="icon-btn"
+                    aria-label="Toggle theme"
+                >
+                    <i class="fa-solid fa-sun"></i>
+                </button>
 
-<h1>
 
-Krish Kumar
+                <button
+                    id="menu-btn"
+                    class="icon-btn menu-btn"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-</h1>
+            </div>
 
-<h2>
+        </nav>
 
-<span id="typing"></span>
+    </header>
 
-</h2>
 
-<p>
 
-Passionate Full Stack Developer creating responsive web applications with clean UI and scalable backend solutions.
+    <main>
 
-</p>
 
-<div class="hero-btns">
+        <!-- =========================
+             HERO
+        ========================== -->
 
-<a href="#projects" class="btn primary">
+        <section
+            id="home"
+            class="hero section"
+        >
 
-View Projects
 
-</a>
+            <div class="hero-content">
 
-<a href="assets/resume.pdf" class="btn secondary">
 
-Download CV
+                <div class="availability">
 
-</a>
+                    <span class="status-dot"></span>
 
-</div>
+                    Available for opportunities
 
-</div>
+                </div>
 
-<div class="hero-right">
 
-<img src="assets/images/profile.png" alt="Profile">
+                <p class="hero-intro">
+                    HELLO, I'M
+                </p>
 
-</div>
 
-</section>
+                <h1>
+                    Krish Kumar
+                </h1>
 
-<section id="about">
 
-<div class="container">
+                <h2>
 
-<h2>
+                    <span class="gradient-text">
 
-About Me
+                        <span id="typing"></span>
 
-</h2>
+                    </span>
 
-<p>
+                </h2>
 
-I'm a passionate Full Stack Developer specializing in building modern websites and web applications using HTML, CSS, JavaScript, React, Node.js, Express.js, and MongoDB.
 
-I enjoy creating responsive, user-friendly interfaces and solving real-world problems through technology.
+                <p class="hero-description">
 
-</p>
+                    I build modern, responsive web applications
+                    and AI-powered solutions using the MERN stack,
+                    JavaScript, LLMs and modern developer tools.
 
-</div>
+                </p>
 
-</section>
 
-<section id="skills">
+                <!-- HERO BUTTONS -->
 
-<div class="container">
+                <div class="hero-buttons">
 
-<h2>
 
-Skills
+                    <a
+                        href="#projects"
+                        class="btn btn-primary"
+                    >
 
-</h2>
+                        View My Work
 
-<div class="skills-grid">
+                        <i class="fa-solid fa-arrow-right"></i>
 
-<div class="skill-card">HTML5</div>
+                    </a>
 
-<div class="skill-card">CSS3</div>
 
-<div class="skill-card">JavaScript</div>
+                    <a
+                        href="assets/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
 
-<div class="skill-card">React.js</div>
+                        <i class="fa-solid fa-file-arrow-down"></i>
 
-<div class="skill-card">Node.js</div>
+                        Resume
 
-<div class="skill-card">Express.js</div>
+                    </a>
 
-<div class="skill-card">MongoDB</div>
 
-<div class="skill-card">Git & GitHub</div>
+                </div>
 
-</div>
 
-</div>
+                <!-- SOCIAL -->
 
-</section>
+                <div class="social-links">
 
-<section id="projects">
 
-<div class="container">
+                    <a
+                        href="https://github.com/krish1305"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
 
-<h2>
+                        <i class="fa-brands fa-github"></i>
 
-Projects
+                    </a>
 
-</h2>
 
-<div class="project-grid">
+                    <a
+                        href="https://www.linkedin.com/in/krish-kumar-8263b0278/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
 
+                        <i class="fa-brands fa-linkedin-in"></i>
 
+                    </a>
 
-<div class="project-card">
 
-<h3>
+                    <a
+                        href="mailto:krishk3328@gmail.com"
+                        aria-label="Email"
+                    >
 
-Furniture Website
+                        <i class="fa-solid fa-envelope"></i>
 
-</h3>
+                    </a>
 
-<p>
 
-Modern furniture company website with responsive UI.
+                </div>
 
-</p>
 
-<a href=#>View Project</a>
+            </div>
 
-</div>
 
-<div class="project-card">
 
-<h3>
+            <!-- HERO IMAGE -->
 
-Notes App
+            <div class="hero-visual">
 
-</h3>
 
-<p>
+                <div class="image-glow"></div>
 
-CRUD Notes Application using MERN Stack.
 
-</p>
+                <div class="profile-card">
 
-<a href="https://notes-app-xi-orpin.vercel.app?utm_source=chatgpt.com">View Project</a>
 
-</div>
+                    <div class="card-top">
 
-<div class="project-card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
 
-<h3>
+                    </div>
 
-AI Chat Box
 
-</h3>
+                    <div class="profile-image-wrapper">
 
-<p>
+                        <img
+                            src="assets/images/profile.png"
+                            alt="Krish Kumar"
+                            class="profile-image"
+                        >
 
-Enterprise AI SaaS platform built using MERN Stack.
+                    </div>
 
-</p>
 
-<a href="#">View Project</a>
+                    <div class="floating-tag tag-one">
 
-</div>
+                        <i class="fa-brands fa-react"></i>
 
-</div>
+                        React
 
-</div>
+                    </div>
 
-</section>
 
-<section id="contact">
+                    <div class="floating-tag tag-two">
 
-<div class="container">
+                        <i class="fa-solid fa-robot"></i>
 
-<h2>
+                        AI
 
-Contact
+                    </div>
 
-</h2>
 
-<form>
+                </div>
 
-<input type="text" placeholder="Your Name">
 
-<input type="email" placeholder="Your Email">
+            </div>
 
-<textarea placeholder="Your Message"></textarea>
 
-<button>
+        </section>
 
-Send Message
 
-</button>
 
-</form>
+        <!-- =========================
+             STATS
+        ========================== -->
 
-</div>
+        <section class="stats section-small">
 
-</section>
 
-<footer>
+            <div class="stats-container">
 
-<p>
 
-© 2026 Krish Kumar. All Rights Reserved.
+                <div class="stat">
 
-</p>
+                    <strong>2+</strong>
 
-</footer>
+                    <span>
+                        Major Projects
+                    </span>
 
-<script src="js/script.js"></script>
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>MERN</strong>
+
+                    <span>
+                        Full Stack
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>AI</strong>
+
+                    <span>
+                        LLM & MCP
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>DSA</strong>
+
+                    <span>
+                        Problem Solving
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            id="about"
+            class="section"
+        >
+
+
+            <div class="section-heading">
+
+
+                <span class="section-label">
+                    ABOUT ME
+                </span>
+
+
+                <h2>
+
+                    Turning ideas into
+
+                    <span>
+                        real products.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    A little bit about me and what I love building.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="about-grid">
+
+
+                <div class="about-content">
+
+
+                    <p>
+
+                        I'm a Full Stack Developer focused on building
+                        clean, responsive and practical web applications.
+                        I enjoy working across the frontend and backend,
+                        from designing interfaces to building APIs and
+                        connecting databases.
+
+                    </p>
+
+
+                    <p>
+
+                        Alongside the MERN stack, I'm exploring
+                        AI-powered applications, Large Language Models
+                        and Model Context Protocol (MCP) to build
+                        smarter and more useful applications.
+
+                    </p>
+
+
+                    <div class="about-highlights">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-code"></i>
+
+                            <div>
+
+                                <strong>
+                                    Clean Code
+                                </strong>
+
+                                <span>
+                                    Readable & maintainable
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <div>
+
+                                <strong>
+                                    Full Stack
+                                </strong>
+
+                                <span>
+                                    Frontend to backend
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-brain"></i>
+
+                            <div>
+
+                                <strong>
+                                    AI Curious
+                                </strong>
+
+                                <span>
+                                    LLMs & MCP
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TERMINAL CARD -->
+
+                <div class="about-card">
+
+
+                    <div class="terminal-header">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="terminal-body">
+
+
+                        <p>
+
+                            <span class="code-purple">
+                                const
+                            </span>
+
+                            developer =
+
+                            <span class="code-green">
+                                {
+                            </span>
+
+                        </p>
+
+
+                        <p class="indent">
+
+                            name:
+
+                            <span class="code-yellow">
+                                "Krish Kumar"
+                            </span>,
+
+                        </p>
+
+
+                        <p class="indent">
+
+                            role:
+
+                            <span class="code-yellow">
+                                "Full Stack Developer"
+                            </span>,
+
+                        </p>
+
+
+                        <p class="indent">
+
+                            stack:
+
+                            <span class="code-yellow">
+                                "MERN"
+                            </span>,
+
+                        </p>
+
+
+                        <p class="indent">
+
+                            focus:
+
+                            <span class="code-yellow">
+                                "AI / LLM / MCP"
+                            </span>
+
+                        </p>
+
+
+                        <p>
+
+                            <span class="code-green">
+                                };
+                            </span>
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section
+            id="skills"
+            class="section skills-section"
+        >
+
+
+            <div class="section-heading">
+
+
+                <span class="section-label">
+                    TECH STACK
+                </span>
+
+
+                <h2>
+
+                    Tools I
+
+                    <span>
+                        work with.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Technologies I use to build and ship projects.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-html5"></i>
+
+                    <h3>HTML5</h3>
+
+                    <span>
+                        Structure
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-css3-alt"></i>
+
+                    <h3>CSS3</h3>
+
+                    <span>
+                        UI & Design
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-js"></i>
+
+                    <h3>JavaScript</h3>
+
+                    <span>
+                        Programming
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-react"></i>
+
+                    <h3>React.js</h3>
+
+                    <span>
+                        Frontend
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-node-js"></i>
+
+                    <h3>Node.js</h3>
+
+                    <span>
+                        Backend
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-solid fa-server"></i>
+
+                    <h3>Express.js</h3>
+
+                    <span>
+                        REST APIs
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-solid fa-database"></i>
+
+                    <h3>MongoDB</h3>
+
+                    <span>
+                        Database
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-python"></i>
+
+                    <h3>Python</h3>
+
+                    <span>
+                        Programming
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <h3>C++</h3>
+
+                    <span>
+                        DSA
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-brands fa-git-alt"></i>
+
+                    <h3>Git</h3>
+
+                    <span>
+                        Version Control
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <h3>Gemini / LLMs</h3>
+
+                    <span>
+                        AI Integration
+                    </span>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                    <h3>MCP</h3>
+
+                    <span>
+                        AI Tools
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section
+            id="projects"
+            class="section"
+        >
+
+
+            <div class="section-heading">
+
+
+                <span class="section-label">
+                    MY WORK
+                </span>
+
+
+                <h2>
+
+                    Projects I've
+
+                    <span>
+                        built.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Real-world projects showcasing my development skills.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="projects-grid">
+
+
+
+                <!-- =========================
+                     PROJECT 1
+                ========================== -->
+
+                <article class="project-card featured">
+
+
+                    <div class="project-top">
+
+
+                        <div class="project-icon">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+
+                        <div class="project-links">
+
+
+                            <!-- GITHUB -->
+
+                            <a
+                                href="https://github.com/krish1305"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                            >
+
+                                <i class="fa-brands fa-github"></i>
+
+                            </a>
+
+
+                            <!-- LIVE DEMO -->
+
+                            <a
+                                href="https://ai-chat-app-liard-delta.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Live Demo"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <span class="project-number">
+                        01
+                    </span>
+
+
+                    <h3>
+                        AI Chat Application
+                    </h3>
+
+
+                    <p>
+
+                        An AI-powered full-stack chat application
+                        using Gemini API with document/PDF understanding,
+                        conversational AI and basic MCP integration for
+                        structured tools and context-aware workflows.
+
+                    </p>
+
+
+                    <div class="tech-stack">
+
+                        <span>JavaScript</span>
+
+                        <span>Node.js</span>
+
+                        <span>Express</span>
+
+                        <span>Gemini API</span>
+
+                        <span>MCP</span>
+
+                        <span>REST API</span>
+
+                    </div>
+
+
+                    <!-- LIVE DEMO -->
+
+                    <a
+                        href="https://ai-chat-app-liard-delta.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-btn"
+                    >
+
+                        Live Demo
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- =========================
+                     PROJECT 2
+                ========================== -->
+
+                <article class="project-card">
+
+
+                    <div class="project-top">
+
+
+                        <div class="project-icon">
+
+                            <i class="fa-solid fa-couch"></i>
+
+                        </div>
+
+
+                        <div class="project-links">
+
+
+                            <!-- GITHUB -->
+
+                            <a
+                                href="https://github.com/aryan6724/home-bliss-ecommerce"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                            >
+
+                                <i class="fa-brands fa-github"></i>
+
+                            </a>
+
+
+                            <!-- LIVE -->
+
+                            <a
+                                href="https://home-bliss-ecommerce.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Live Demo"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <span class="project-number">
+                        02
+                    </span>
+
+
+                    <h3>
+                        Home Bliss
+                    </h3>
+
+
+                    <p>
+
+                        A responsive full-stack furniture e-commerce
+                        platform built with React, Node.js, Express
+                        and MongoDB with product browsing and
+                        modern frontend interactions.
+
+                    </p>
+
+
+                    <div class="tech-stack">
+
+                        <span>React.js</span>
+
+                        <span>Node.js</span>
+
+                        <span>Express.js</span>
+
+                        <span>MongoDB</span>
+
+                        <span>REST API</span>
+
+                    </div>
+
+
+                    <!-- LIVE DEMO -->
+
+                    <a
+                        href="https://home-bliss-ecommerce.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-btn"
+                    >
+
+                        Live Demo
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- =========================
+                     PROJECT 3
+                ========================== -->
+
+                <article class="project-card">
+
+
+                    <div class="project-top">
+
+
+                        <div class="project-icon">
+
+                            <i class="fa-solid fa-note-sticky"></i>
+
+                        </div>
+
+
+                        <div class="project-links">
+
+
+                            <!-- GITHUB -->
+
+                            <a
+                                href="https://github.com/krish1305/notes-app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                            >
+
+                                <i class="fa-brands fa-github"></i>
+
+                            </a>
+
+
+                            <!-- LIVE -->
+
+                            <a
+                                href="https://notes-app-xi-orpin.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Live Demo"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+
+                    <h3>
+                        Notes App
+                    </h3>
+
+
+                    <p>
+
+                        A full-stack notes application focused on
+                        CRUD operations, backend API integration,
+                        database management and responsive UI.
+
+                    </p>
+
+
+                    <div class="tech-stack">
+
+                        <span>React</span>
+
+                        <span>Node.js</span>
+
+                        <span>Express</span>
+
+                        <span>MongoDB</span>
+
+                    </div>
+
+
+                    <!-- LIVE DEMO -->
+
+                    <a
+                        href="https://notes-app-xi-orpin.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-btn"
+                    >
+
+                        Live Demo
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta-section">
+
+
+            <div class="cta-card">
+
+
+                <div class="cta-content">
+
+
+                    <span class="section-label">
+
+                        HAVE A PROJECT IN MIND?
+
+                    </span>
+
+
+                    <h2>
+
+                        Let's build something
+
+                        <span>
+                            great together.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        I'm always interested in learning,
+                        building and working on meaningful projects.
+
+                    </p>
+
+
+                    <a
+                        href="mailto:krishk3328@gmail.com"
+                        class="btn btn-primary"
+                    >
+
+                        Let's Connect
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </div>
+
+
+                <div class="cta-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            id="contact"
+            class="section contact-section"
+        >
+
+
+            <div class="section-heading">
+
+
+                <span class="section-label">
+                    CONTACT
+                </span>
+
+
+                <h2>
+
+                    Let's
+
+                    <span>
+                        connect.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Have an opportunity, project or just want
+                    to talk tech? Feel free to reach out.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="contact-grid">
+
+
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/krish1305"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card"
+                >
+
+
+                    <div class="contact-icon">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            GitHub
+                        </span>
+
+                        <strong>
+                            @krish1305
+                        </strong>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+
+                </a>
+
+
+
+                <!-- LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/krish-kumar-8263b0278/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card"
+                >
+
+
+                    <div class="contact-icon">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            LinkedIn
+                        </span>
+
+                        <strong>
+                            Krish Kumar
+                        </strong>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+
+                </a>
+
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:krishk3328@gmail.com"
+                    class="contact-card"
+                >
+
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong>
+                            krishk3328@gmail.com
+                        </strong>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+
+        <div class="footer-content">
+
+
+            <a
+                href="#home"
+                class="logo"
+            >
+
+                krish<span>.</span>
+
+            </a>
+
+
+            <p>
+                Building. Learning. Improving.
+            </p>
+
+
+            <div class="footer-social">
+
+
+                <a
+                    href="https://github.com/krish1305"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/krish-kumar-8263b0278/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Krish Kumar.
+                Built with HTML, CSS & JavaScript.
+
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <button
+        id="backToTop"
+        aria-label="Back to top"
+    >
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/script.js"></script>
+
 
 </body>
 
